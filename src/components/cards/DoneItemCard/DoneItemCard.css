@@ -1,0 +1,30 @@
+.card {
+    height: 6rem;
+    padding: 0 1.6rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-column-gap: 1.6rem;
+    align-items: center;
+    justify-items: center;
+}
+
+.card--checkBox {
+    display: block;
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #85A3FF;
+    border-radius: 59px;
+}
+
+.card--text {
+    font-size: 1.8rem;
+    color: rgba(0, 0, 0, 0.7);
+    justify-self: left;
+}
+
