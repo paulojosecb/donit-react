@@ -1,46 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import './main.scss';
 
-import DoneItemCard from './components/cards/DoneItemCard/DoneItemCard';
-import Header from './components/Header/Header';
-import OverviewCard from './components/cards/OverviewCard/OverviewCard';
-import WeeklyOverviewCard from './components/cards/WeeklyOverviewCard/WeeklyOverviewCard';
-import LastSevenWeeksOverviewCard from './components/cards/LastSevenWeeksOverviewCard/LastSevenWeeksOverviewCard';
+import HomePage from './pages/HomePage/HomePage';
+import OverviewPage from './pages/OverviewPage/OverviewPage';
 
-import List from './components/lists/List/List';
-
-// eslint-disable-next-line react/prefer-stateless-function
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <div className="row">
-          <Header />
-        </div>
-
-        <div className="row">
-          <OverviewCard />
-        </div>
-
-        <div className="row">
-          <WeeklyOverviewCard />
-        </div>
-
-        <div className="row">
-          <LastSevenWeeksOverviewCard />
-        </div>
-
-        <div className="row">
-          <List listHeader="These are the things you’ve done today">
-            <DoneItemCard />
-            <DoneItemCard />
-            <DoneItemCard />
-          </List>
-        </div>
-      </div>
-    );
-  }
-}
+const App = () => {
+  return (
+    <div>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/overview" exact component={OverviewPage} />
+        </Switch>
+      </BrowserRouter>
+    </div>
+  );
+};
 
 export default App;
