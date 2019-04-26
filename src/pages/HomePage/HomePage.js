@@ -5,25 +5,21 @@ import OverviewCard from '../../components/cards/OverviewCard/OverviewCard';
 import List from '../../components/lists/List/List';
 import DoneItemCard from '../../components/cards/DoneItemCard/DoneItemCard';
 
+import Container from '../../Container/Container';
+
 const HomePage = () => {
   return (
-    <div>
-      <div className="row">
-        <Header showProfileImage />
-      </div>
+    <Container>
+      <Header showProfileImage />
 
-      <div className="row">
-        <OverviewCard />
-      </div>
+      <OverviewCard />
 
-      <div className="row">
-        <List listHeader="These are the things you’ve done today">
-          <DoneItemCard />
-          <DoneItemCard />
-          <DoneItemCard />
-        </List>
-      </div>
-    </div>
+      <List listHeader="These are the things you’ve done today">
+        <DoneItemCard />
+        <DoneItemCard />
+        <DoneItemCard />
+      </List>
+    </Container>
   );
 };
 
